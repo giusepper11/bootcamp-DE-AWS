@@ -1,0 +1,12 @@
+{
+  "name": "Giuseppe",
+  "country": "BR",
+  "sports": [
+    "soccer",
+    "beer"
+  ],
+  "address": {
+    "street" : "xpto",
+    "house": "xpto2"
+  }
+}

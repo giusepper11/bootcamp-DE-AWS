@@ -1,0 +1,48 @@
+# TODO
+Resources:
+  Redshift:
+    Type: AWS::Redshift::Cluster
+    Properties:
+      AllowVersionUpgrade: True
+      AutomatedSnapshotRetentionPeriod: 5
+      AvailabilityZone: us-east-1a
+      ClusterIdentifier: my-redshift-cluster
+      ClusterParameterGroupName: !Ref RedshiftParameterGroup
+      ClusterSecurityGroups:
+        - String
+      ClusterSubnetGroupName: String
+      ClusterType: String
+      ClusterVersion: String
+      DBName: String
+      ElasticIp: String
+      Encrypted: Boolean
+      HsmClientCertificateIdentifier: String
+      HsmConfigurationIdentifier: String
+      IamRoles:
+        - String
+      KmsKeyId: String
+      LoggingProperties:
+        LoggingProperties
+      MasterUsername: String
+      MasterUserPassword: String
+      NodeType: String
+      NumberOfNodes: Integer
+      OwnerAccount: String
+      Port: Integer
+      PreferredMaintenanceWindow: String
+      PubliclyAccessible: Boolean
+      SnapshotClusterIdentifier: String
+      SnapshotIdentifier: String
+      Tags:
+        - Tag
+      VpcSecurityGroupIds:
+        - String
+
+  RedshiftParameterGroup:
+    Type: AWS::Redshift::ClusterParameterGroup
+      Properties:
+        Description: Parameter group for redshift cluster
+        ParameterGroupFamily: redshift-1.0
+        Parameters:
+          - ParameterName: max_concurrency_scaling_cluster
+            ParameterValue: 1
